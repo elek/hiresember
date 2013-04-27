@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="net.anzix.android.hiresember"
+          android:versionCode="1"
+          android:versionName="1.0">
+
+    <uses-sdk android:minSdkVersion="16"/>
+    <application
+            android:label="Híres ember"
+            android:icon="@drawable/ic_extension_hiresember">
+
+        <service android:name=".HiresEmberExtension"
+                 android:icon="@drawable/ic_extension_hiresember"
+                 android:label="Híres ember"
+                 android:permission="com.google.android.apps.dashclock.permission.READ_EXTENSION_DATA">
+            <intent-filter>
+                <action android:name="com.google.android.apps.dashclock.Extension" />
+            </intent-filter>
+            <meta-data android:name="protocolVersion" android:value="1" />
+            <meta-data android:name="description"
+                       android:value="Híres ember születésnapok az aktuális napra." />
+         </service>
+
+    </application>
+</manifest>
